@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: 2024-10-26
+  begin_time: 2024-10-26 17:07:41
+  close_time: 2024-10-26 17:07:41
+  interval_s: 2024-10-26 17:07:41
+  interval_e: 2024-10-26 17:07:41
+  unit_minute: 1
+  no_use: false
+
+two:
+  day: 2024-10-26
+  begin_time: 2024-10-26 17:07:41
+  close_time: 2024-10-26 17:07:41
+  interval_s: 2024-10-26 17:07:41
+  interval_e: 2024-10-26 17:07:41
+  unit_minute: 1
+  no_use: false
