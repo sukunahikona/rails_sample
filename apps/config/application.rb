@@ -21,5 +21,7 @@ module Apps
     config.time_zone = "Tokyo"
     config.active_record.default_timezone = :local
     config.i18n.default_locale = :ja
+
+    config.secret_key_base = ENV['SECRET_KEY_BASE']
   end
 end
