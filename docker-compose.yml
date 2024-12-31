@@ -28,3 +28,4 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dev}
       POSTGRES_DB_HOST: ${POSTGRES_DB_HOST:-db}
       RAILS_ENV: ${RAILS_ENV:-development}
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE}
