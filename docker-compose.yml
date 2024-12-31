@@ -24,6 +24,7 @@ services:
     working_dir: /apps
     command: bash -c "rm -f tmp/pids/server.pid && bin/dev"
     environment:
-      POSTGRES_USER: dev
-      POSTGRES_PASSWORD: dev
-      POSTGRES_DB_HOST: db
+      POSTGRES_USER: ${POSTGRES_USER:-dev}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dev}
+      POSTGRES_DB_HOST: ${POSTGRES_DB_HOST:-db}
+      RAILS_ENV: ${RAILS_ENV:-development}
