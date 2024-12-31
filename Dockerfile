@@ -21,4 +21,4 @@ RUN chmod +x /apps/entrypoint.sh
 
 ENTRYPOINT ["sh", "/apps/entrypoint.sh"]
 EXPOSE 3000
-CMD ["rails", "s", "-b", "0.0.0.0"]
+CMD ["rails", "s", "-b", "0.0.0.0", "-p", "80"]
