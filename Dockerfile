@@ -12,8 +12,9 @@ RUN chown -R rails:rails /apps
 
 USER rails
 
-COPY --chown=rails:rails ./apps/Gemfile /apps/Gemfile
-COPY --chown=rails:rails ./apps/Gemfile.lock /apps/Gemfile.lock
+#COPY --chown=rails:rails ./apps/Gemfile /apps/Gemfile
+#COPY --chown=rails:rails ./apps/Gemfile.lock /apps/Gemfile.lock
+COPY --chown=rails:rails ./apps /apps
 RUN bundle install
 
 COPY --chown=rails:rails ./apps/entrypoint.sh /apps/entrypoint.sh
