@@ -9,11 +9,11 @@ default: &default
 
 development:
   <<: *default
-  database: dev
+  database: asahikodb
 
 test:
   <<: *default
-  database: apps_test
+  database: asahikodb
 
 production:
   <<: *default
