@@ -17,6 +17,7 @@ RUN chmod +x /apps/entrypoint.sh
 
 ARG RAILS_ENV=production
 RUN RAILS_ENV=${RAILS_ENV} bundle install
+RUN RAILS_ENV=${RAILS_ENV} SECRET_KEY_BASE=dummy rails assets:precompile
 
 ENTRYPOINT ["sh", "/apps/entrypoint.sh"]
 EXPOSE 8080
