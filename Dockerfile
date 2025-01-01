@@ -12,15 +12,11 @@ RUN chown -R rails:rails /apps
 
 USER rails
 
-#COPY --chown=rails:rails ./apps/Gemfile /apps/Gemfile
-#COPY --chown=rails:rails ./apps/Gemfile.lock /apps/Gemfile.lock
 COPY --chown=rails:rails ./apps /apps
+RUN chmod +x /apps/entrypoint.sh
 
 ARG RAILS_ENV=production
 RUN RAILS_ENV=${RAILS_ENV} bundle install
-
-COPY --chown=rails:rails ./apps/entrypoint.sh /apps/entrypoint.sh
-RUN chmod +x /apps/entrypoint.sh
 
 ENTRYPOINT ["sh", "/apps/entrypoint.sh"]
 EXPOSE 8080
