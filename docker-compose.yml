@@ -11,7 +11,7 @@ services:
       POSTGRES_USER: dev
       POSTGRES_PASSWORD: dev
       POSTGRES_DB: asahikodb
-  web:
+  app:
     build: 
       context: .
       args:
@@ -32,3 +32,10 @@ services:
       POSTGRES_DB_HOST: ${POSTGRES_DB_HOST:-db}
       RAILS_ENV: ${RAILS_ENV:-development}
       SECRET_KEY_BASE: ${SECRET_KEY_BASE:-Hoge}
+  web:
+    build:
+      context: ./nginx
+    ports:
+      - "80:80"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
