@@ -20,5 +20,5 @@ RUN RAILS_ENV=${RAILS_ENV} bundle install
 RUN RAILS_ENV=${RAILS_ENV} SECRET_KEY_BASE=dummy rails assets:precompile
 
 ENTRYPOINT ["sh", "/apps/entrypoint.sh"]
-EXPOSE 8080
-CMD ["rails", "s", "-b", "0.0.0.0", "-p", "8080"]
+EXPOSE 3000
+CMD ["rails", "s", "-b", "0.0.0.0", "-p", "3000"]
